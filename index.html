@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>موقع القصص</title>
+
+<style>
+    body{
+        font-family: Arial;
+        direction: rtl;
+        background:#f4f4f4;
+        margin:0;
+    }
+
+    header{
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    .container{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap:15px;
+        padding:20px;
+    }
+
+    .card{
+        background:white;
+        padding:15px;
+        border-radius:10px;
+        box-shadow:0 0 10px #ccc;
+        text-align:center;
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:scale(1.05);
+    }
+
+    a{
+        display:inline-block;
+        margin-top:10px;
+        padding:8px 12px;
+        background:#222;
+        color:white;
+        text-decoration:none;
+        border-radius:5px;
+    }
+
+    footer{
+        text-align:center;
+        padding:10px;
+        background:#111;
+        color:white;
+        margin-top:20px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 موقع القصص</h1>
+    <p>مجموعة 50 قصة غامضة ورعب</p>
+</header>
+
+<div class="container">
+
+<!-- 50 قصة تلقائية -->
+<script>
+for(let i=1;i<=50;i++){
+    document.write(`
+        <div class="card">
+            <h3>القصة رقم ${i}</h3>
+            <p>قصة غامضة رقم ${i}</p>
+            <a href="story${i}.html">اقرأ القصة</a>
+        </div>
+    `);
+}
+</script>
+
+</div>
+
+<footer>
+    جميع الحقوق محفوظة © موقع القصص
+</footer>
+
+</body>
+</html>
